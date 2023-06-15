@@ -59,7 +59,7 @@ export const createShow = async (showBody: Record<string, any>): Promise<IShowDo
  * @returns {Promise<QueryResult>}
  */
 export const queryShows = async (filter: Record<string, any>): Promise<any> => {
-  console.log("filter",filter)
+
   if(filter['itemID']){
     return Show.aggregate([
       {
