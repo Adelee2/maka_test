@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  app:
+    container_name: maka-prod
+    build: 
+      target: production
+    command: yarn start
