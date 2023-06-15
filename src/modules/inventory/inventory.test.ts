@@ -10,7 +10,7 @@ import { NewCreatedInventory } from './inventory.interfaces';
 setupTestDB();
 
 describe('Inventory routes', () => {
-  describe('POST /v1/inventory', () => {
+  describe('POST /inventory', () => {
     let newInventory: NewCreatedInventory;
 
     beforeEach(() => {
@@ -44,19 +44,8 @@ describe('Inventory routes', () => {
     });
 
 
-    test('should return 400 error if email is invalid', async () => {
-      // await insertInventorys([admin]);
-      // newInventory.email = 'invalidEmail';
-
-      await request(app)
-        .post('/inventory')
-        .send(newInventory)
-        .expect(httpStatus.BAD_REQUEST);
-    });
-
-    test('should return 400 error if email is already used', async () => {
-      // await insertInventorys([admin, inventoryOne]);
-      // newInventory.email = inventoryOne.email;
+    test('should return 400 error if not found', async () => {
+      newInventory.itemID = faker.datatype.number({min: 1000000});
 
       await request(app)
         .post('/inventory')

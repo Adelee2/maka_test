@@ -111,7 +111,7 @@ MONGODB_URL=mongodb://127.0.0.1:27017/maka
 CLIENT_URL=http://localhost:3000
 ```
 ### API Endpoints
-postman collection: https://api.postman.com/collections/10678682-30ae5c06-267b-4eac-9e0b-68f7c32cf2c3?access_key=PMAT-01H3050VGC6AVTDENRCGD6138J
+
 List of available routes:
 
 
